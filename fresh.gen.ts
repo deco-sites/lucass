@@ -26,6 +26,9 @@ import * as $ShippingSimulation from "./islands/ShippingSimulation.tsx";
 import * as $ShowMore from "./islands/ShowMore.tsx";
 import * as $WishlistButton_vtex from "./islands/WishlistButton/vtex.tsx";
 import * as $WishlistButton_wake from "./islands/WishlistButton/wake.tsx";
+import * as $camp_ProductModalAddToWishlist from "./islands/camp/ProductModalAddToWishlist.tsx";
+import * as $camp_ShowProductEvents from "./islands/camp/ShowProductEvents.tsx";
+import * as $camp_TriggerSaveProductButton from "./islands/camp/TriggerSaveProductButton.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -56,6 +59,11 @@ const manifest = {
     "./islands/ShowMore.tsx": $ShowMore,
     "./islands/WishlistButton/vtex.tsx": $WishlistButton_vtex,
     "./islands/WishlistButton/wake.tsx": $WishlistButton_wake,
+    "./islands/camp/ProductModalAddToWishlist.tsx":
+      $camp_ProductModalAddToWishlist,
+    "./islands/camp/ShowProductEvents.tsx": $camp_ShowProductEvents,
+    "./islands/camp/TriggerSaveProductButton.tsx":
+      $camp_TriggerSaveProductButton,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

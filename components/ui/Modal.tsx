@@ -46,9 +46,15 @@ function Modal(props: Props) {
         class="modal-toggle"
         onChange={(e) => e.currentTarget.checked === false && onClose?.()}
       />
-      <div class="modal">
+      <div class="modal flex items-center justify-center">
         {!lazy.value && children}
-        <label class="modal-backdrop" for={id}>Close</label>
+        <label
+          class="modal-backdrop absolute w-full h-full"
+          style={{ zIndex: 1 }}
+          for={id}
+        >
+          Close
+        </label>
       </div>
     </>
   );

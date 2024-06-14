@@ -103,6 +103,18 @@ function Navbar(
         )}
 
         <Searchbar searchbar={searchbar} />
+        {!buttons?.hideCampButton && (
+          <a
+            class="flex items-center text-xs font-thin"
+            href="/stats"
+            aria-label="go to Stats page"
+          >
+            <div class="flex btn btn-circle btn-sm btn-ghost gap-1">
+              <Icon id="friends" size={20} />
+            </div>
+            Stats
+          </a>
+        )}
         {!buttons?.hideAccountButton && (
           <a
             class="flex items-center text-xs font-thin"

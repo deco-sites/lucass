@@ -16,6 +16,7 @@ export interface Logo {
   height?: number;
 }
 export interface Buttons {
+  hideCampButton?: boolean;
   hideSearchButton?: boolean;
   hideAccountButton?: boolean;
   hideWishlistButton?: boolean;
