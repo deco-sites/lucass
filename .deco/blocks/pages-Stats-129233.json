@@ -1,0 +1,23 @@
+{
+  "name": "Stats",
+  "path": "/stats",
+  "sections": [
+    {
+      "__resolveType": "Header - 01"
+    },
+    {
+      "__resolveType": "site/sections/Camp/TotalSaves.tsx",
+      "text": "Total de eventos"
+    },
+    {
+      "__resolveType": "site/sections/Camp/ShowProductEvents.tsx"
+    },
+    {
+      "__resolveType": "Footer - 04"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
