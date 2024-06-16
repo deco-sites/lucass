@@ -27,7 +27,11 @@ export default defineApp(async (_req, ctx) => {
           rel="stylesheet"
         />
 
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+        />
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
