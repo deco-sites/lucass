@@ -110,9 +110,8 @@ function Navbar(
             aria-label="go to Stats page"
           >
             <div class="flex btn btn-circle btn-sm btn-ghost gap-1">
-              <Icon id="friends" size={20} />
+              <Icon id="friends" size={24} />
             </div>
-            Stats
           </a>
         )}
         {!buttons?.hideAccountButton && (
