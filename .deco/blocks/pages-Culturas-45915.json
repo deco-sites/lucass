@@ -1,0 +1,28 @@
+{
+  "name": "Culturas",
+  "path": "/culturas",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx"
+    },
+    {
+      "__resolveType": "Header - 01"
+    },
+    {
+      "__resolveType": "site/sections/Camp/Lugar.tsx",
+      "temperature": {
+        "__resolveType": "weather/loaders/temperature.ts",
+        "lat": -22.2871,
+        "long": -42.5337
+      },
+      "text": "O conjunto arquitetônico e paisagístico da Praça Getúlio Vargas, em Nova Friburgo, foi tombado pelo Iphan, em 1972. No seu entorno, estão importantes construções de arquitetura eclética e estilo germânico. O projeto da praça foi encomendado ao botânico e paisagista francês, Auguste François Marie Glaziou.  A praça - construída a partir do principal eixo das primeiras construções coloniais - destaca-se por sua arborização com quatro renques de eucaliptos da espécie robusta, centenários, plantadas por Glaziou, com dupla finalidade: a de conferir ao logradouro especial feição paisagística e a de sanear uma área alagadiça aí existente. \n\nO valor paisagístico destaca-se graças à grande dimensão da arborização e por ser a única praça de Glaziou realizada segundo os moldes dos jardins franceses do século XVII, ao contrário do estilo inglês - livre, assimétrico e com elementos românticos do qual o paisagista sempre foi seguidor. Ele criou uma praça onde as linhas direcionais conduziam o olhar para uma perspectiva sem fim, e onde a escala humana perdia-se no eixo longitudinal de simetria dos espelhos d’água e renques formados pelos eucaliptos. \n\nConhecida, nacionalmente, como a “Suíça Brasileira”, a cidade atraía visitantes em busca de tranquilidade, clima de montanha, gastronomia de qualidade, eventos singulares e uma atmosfera de “cidade europeia”, onde as fábricas conviviam harmonicamente com a natureza e os costumes trazidos pelas dez colônias que formaram as características da população friburguense."
+    },
+    {
+      "__resolveType": "Footer - 04"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
