@@ -6,14 +6,24 @@
       "__resolveType": "Header - 01"
     },
     {
-      "__resolveType": "site/sections/Camp/TotalSaves.tsx",
-      "text": "Total de eventos"
-    },
-    {
-      "__resolveType": "site/sections/Camp/ShowProductEvents.tsx"
+      "__resolveType": "site/sections/Content/Hero.tsx",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10791/c0e7bd8c-2f10-4bf9-ab77-313a573526cc",
+      "description": "Aqui vendemos o há de melhor na moda da querida Nova Friburgo",
+      "placement": "left",
+      "cta": [
+        {
+          "variant": "Normal",
+          "href": "/",
+          "text": "Voltar para home"
+        }
+      ],
+      "title": "<p>Quem Somos</p>"
     },
     {
       "__resolveType": "Footer - 04"
+    },
+    {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx"
     }
   ],
   "seo": {

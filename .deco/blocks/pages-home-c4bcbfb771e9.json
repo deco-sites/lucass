@@ -13,10 +13,14 @@
       "productsAds": [
         {
           "__resolveType": "site/sections/Camp/ProductAd.tsx",
+          "highlight": true,
           "product": {
-            "__resolveType": "PDP Loader"
-          },
-          "highlight": true
+            "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+            "slug": {
+              "__resolveType": "website/functions/requestToParam.ts",
+              "param": "slug"
+            }
+          }
         },
         {
           "__resolveType": "site/sections/Camp/ProductAd.tsx",
@@ -67,7 +71,8 @@
         "numberOfSliders": {
           "desktop": 4,
           "mobile": 1
-        }
+        },
+        "headerAlignment": "center"
       },
       "products": {
         "props": {
@@ -104,12 +109,29 @@
           }
         },
         "__resolveType": "site/loaders/Layouts/ProductCard.tsx"
-      }
+      },
+      "title": "Lançamentos"
     },
     {
       "__resolveType": "site/sections/Camp/ProductAd.tsx",
       "product": {
-        "__resolveType": "PDP Loader"
+        "__resolveType": "commerce/loaders/product/extensions/detailsPage.ts",
+        "data": {
+          "slug": {
+            "param": "productId",
+            "__resolveType": "website/functions/requestToParam.ts"
+          },
+          "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+          "similars": true
+        },
+        "extensions": [
+          {
+            "__resolveType": "vtex/loaders/product/extensions/detailsPage.ts",
+            "similars": true,
+            "variants": true,
+            "simulate": true
+          }
+        ]
       }
     },
     {
@@ -119,7 +141,8 @@
         "numberOfSliders": {
           "desktop": 4,
           "mobile": 1
-        }
+        },
+        "headerAlignment": "center"
       },
       "products": {
         "props": {
@@ -156,7 +179,8 @@
           }
         },
         "__resolveType": "site/loaders/Layouts/ProductCard.tsx"
-      }
+      },
+      "title": "Mais Vendidos"
     },
     {
       "__resolveType": "site/sections/Camp/ProductAd.tsx",
