@@ -34,6 +34,16 @@
     },
     {
       "__resolveType": "Footer - 01"
+    },
+    {
+      "__resolveType": "site/sections/Camp/ProductAd.tsx",
+      "product": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+        "slug": {
+          "__resolveType": "website/functions/requestToParam.ts",
+          "param": "slug"
+        }
+      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
