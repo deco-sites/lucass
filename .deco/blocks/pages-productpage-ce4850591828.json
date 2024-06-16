@@ -21,6 +21,22 @@
       }
     },
     {
+      "__resolveType": "site/sections/Camp/ProductAd.tsx",
+      "product": {
+        "__resolveType": "PDP Loader"
+      },
+      "relatedProduct": {
+        "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts",
+        "crossSelling": "whosawalsosaw",
+        "count": 1,
+        "slug": {
+          "__resolveType": "website/functions/requestToParam.ts",
+          "param": "slug"
+        },
+        "hideUnavailableItems": true
+      }
+    },
+    {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
       "title": "You may also like",
       "products": {
@@ -34,16 +50,6 @@
     },
     {
       "__resolveType": "Footer - 01"
-    },
-    {
-      "__resolveType": "site/sections/Camp/ProductAd.tsx",
-      "product": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-        "slug": {
-          "__resolveType": "website/functions/requestToParam.ts",
-          "param": "slug"
-        }
-      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
