@@ -52,6 +52,7 @@ export default function ShowProductEvents() {
         <input
           name="productId"
           type="text"
+          class="border border-gray-500"
           onChange={(e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
             const target = e.target as HTMLInputElement;
             handleProductChange(target?.value);
