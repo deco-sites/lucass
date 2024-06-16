@@ -6,6 +6,7 @@ import ProductModalAddToWishlist from "../../islands/camp/ProductModalAddToWishl
 import TriggerSaveProductButton from "../../islands/camp/TriggerSaveProductButton.tsx";
 import { AppContext } from "../../apps/site.ts";
 import { SectionProps } from "deco/types.ts";
+import type { Product } from "apps/commerce/types.ts";
 
 export interface Props {
   vertical?: boolean;
@@ -13,20 +14,29 @@ export interface Props {
   adDescription?: string;
   highlight?: boolean;
   product?: ProductDetailsPage | null;
+  relatedProduct?: Product[] | null;
 }
 
 export default function ProductAd(
-  { product, vertical, animateImage, adDescription, highlight, comments }:
-    SectionProps<
-      typeof loader
-    >,
+  {
+    product,
+    relatedProduct,
+    vertical,
+    animateImage,
+    adDescription,
+    highlight,
+    comments,
+  }: SectionProps<typeof loader>,
 ) {
-  if (!product) {
+  const productInfo = relatedProduct && relatedProduct.length > 0
+    ? relatedProduct[0]
+    : product?.product;
+  if (!productInfo) {
     return null;
   }
 
-  const { price } = useOffer(product?.product?.offers);
-  const images = product.product.isVariantOf?.image || product.product.image;
+  const { price } = useOffer(productInfo.offers);
+  const images = productInfo.isVariantOf?.image || productInfo.image;
   const [front] = images ?? [];
   const isHighlight = highlight && comments.comments.length > 3;
 
@@ -37,9 +47,9 @@ export default function ProductAd(
           vertical ? "flex-col" : "lg:flex-row"
         } gap-10 my-6 relative`}
       >
-        {front.url! && (
+        {front?.url && (
           <Image
-            src={front.url! ?? ""}
+            src={front.url ?? ""}
             alt={front.alternateName}
             width={300}
             height={300}
@@ -51,7 +61,7 @@ export default function ProductAd(
         )}
 
         {isHighlight && (
-          <div class="w-fit bg-green-500 p-2 absolute left-0 top-4">
+          <div className="w-fit bg-green-500 p-2 absolute left-0 top-4">
             <span>Destaque</span>
           </div>
         )}
@@ -60,10 +70,10 @@ export default function ProductAd(
           <div className="flex justify-between w-full">
             <div className="flex flex-col w-full">
               <h2 className="card-title flex justify-center lg:justify-start">
-                {product?.product.name}
+                {productInfo.name}
               </h2>
               <p className="flex justify-center lg:justify-start">
-                {product?.product.description}
+                {productInfo.description}
               </p>
             </div>
             <TriggerSaveProductButton />
@@ -93,13 +103,13 @@ export default function ProductAd(
           </div>
         </div>
       </div>
-      {product?.product.sku && product?.product.name &&
-        product?.product.description && front.url && (
+      {productInfo.sku && productInfo.name && productInfo.description &&
+        front?.url && (
         <ProductModalAddToWishlist
-          sku={product?.product.sku}
-          title={product?.product.name}
-          description={product?.product.description}
-          imgSrc={front.url!}
+          sku={productInfo.sku}
+          title={productInfo.name}
+          description={productInfo.description}
+          imgSrc={front.url}
         />
       )}
     </section>
@@ -107,7 +117,8 @@ export default function ProductAd(
 }
 
 export const loader = async (props: Props, _req: Request, ctx: AppContext) => {
-  const productId = props.product?.product.sku ?? "0";
+  const productId = props.relatedProduct?.[0]?.sku ||
+    props.product?.product.sku || "0";
   const comments = await ctx.invoke.site.loaders.camp
     .getComment({ productId });
   return { ...props, comments };

@@ -69,7 +69,10 @@ export default function ProductModalAddToWishlist(
       open={displayModalShelfProduct.value}
       onClose={() => displayModalShelfProduct.value = false}
     >
-      <div class="flex flex-row p-4 gap-4 bg-white" style={{ zIndex: 2 }}>
+      <div
+        class="flex flex-row lg:flex-col p-4 gap-4 bg-white"
+        style={{ zIndex: 2 }}
+      >
         <Image
           src={imgSrc ?? ""}
           width={300}
