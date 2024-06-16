@@ -6,7 +6,7 @@ import Image from "apps/website/components/Image.tsx";
 import Button from "../../components/ui/Button.tsx";
 import Modal from "../../components/ui/Modal.tsx";
 import { sendEventCustom } from "../../sdk/analytics.tsx";
-// import Toastify from "toastify-js";
+import Toastify from "toastify";
 
 export interface Props {
   sku: string;
@@ -30,24 +30,17 @@ export default function ProductModalAddToWishlist(
         productId,
       });
 
-      //Ambas bibliotecas quebraram meu repositório.
-      //Importei no JSON e adicionei no header do routes
-      //Funcionavam em dev mas em prod dava pau
-
-      // Toastify({
-      //   text: "Sucesso",
-      //   duration: 3000,
-      //   destination: "https://github.com/apvarun/toastify-js",
-      //   newWindow: true,
-      //   close: true,
-      //   gravity: "top",
-      //   position: "right",
-      //   stopOnFocus: true,
-      //   style: {
-      //     background: "linear-gradient(to right, #00b09b, #96c93d)",
-      //   },
-      //   onClick: function () {},
-      // }).showToast();
+      Toastify({
+        text: "Sucesso!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+      }).showToast();
 
       sendEventCustom({
         name: "post_score",
