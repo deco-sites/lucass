@@ -17,29 +17,31 @@
           "highlight": true,
           "product": {
             "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-            "slug": {
-              "__resolveType": "website/functions/requestToParam.ts",
-              "param": "slug"
-            }
+            "slug": "camisa-masculina-xadrez-sun-e-azul"
           }
         },
         {
           "__resolveType": "site/sections/Camp/ProductAd.tsx",
+          "highlight": true,
           "product": {
-            "__resolveType": "PDP Loader"
+            "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+            "slug": "camisa-masculina-xadrez-gray-e-azul"
           }
         },
         {
           "__resolveType": "site/sections/Camp/ProductAd.tsx",
+          "highlight": true,
           "product": {
-            "__resolveType": "PDP Loader"
-          },
-          "highlight": true
+            "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+            "slug": "camisa-masculina-xadrez-sun-e-azul"
+          }
         },
         {
           "__resolveType": "site/sections/Camp/ProductAd.tsx",
+          "highlight": true,
           "product": {
-            "__resolveType": "PDP Loader"
+            "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+            "slug": "camisa-polo-masculina-azul-sea"
           }
         }
       ],
@@ -118,12 +120,9 @@
       "product": {
         "__resolveType": "commerce/loaders/product/extensions/detailsPage.ts",
         "data": {
-          "slug": {
-            "param": "productId",
-            "__resolveType": "website/functions/requestToParam.ts"
-          },
           "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-          "similars": true
+          "similars": false,
+          "slug": "camiseta-verde-clara"
         },
         "extensions": [
           {
@@ -186,7 +185,20 @@
     {
       "__resolveType": "site/sections/Camp/ProductAd.tsx",
       "product": {
-        "__resolveType": "PDP Loader"
+        "__resolveType": "commerce/loaders/product/extensions/detailsPage.ts",
+        "data": {
+          "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+          "similars": false,
+          "slug": "camisa-polo-masculina-azul-sea"
+        },
+        "extensions": [
+          {
+            "__resolveType": "vtex/loaders/product/extensions/detailsPage.ts",
+            "similars": true,
+            "variants": true,
+            "simulate": true
+          }
+        ]
       }
     },
     {
